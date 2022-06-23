@@ -4,6 +4,7 @@ var config = require('./config');
 
 client.on('ready', () => {
 	console.log('Process Sucseced!');
+	console.log(client.user.tag + " is enable");
 });
 
 //login
