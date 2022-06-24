@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "discord.js": "^13.8.0"
+    "ascii-table": "^0.0.9",
+    "discord.js": "^13.8.0",
+    "fs": "^0.0.1-security"
   },
   "scripts": {
     "start": "node main.js"
