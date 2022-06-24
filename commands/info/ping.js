@@ -9,7 +9,7 @@ module.exports = {
         const msg = await message.channel.send('🔄 Pinding...');
         const embed = new MessageEmbed()
           .setTitle('Pong!')
-          .setDescription(`> 📌Ping is ${client.ws.ping}ms!\n> 📌Running speed is ${Math.floor(msg.createdAt - message.createdAt)}ms!`);
+          .setDescription(`>📌Ping is ${client.ws.ping}ms!\n>📌Running speed is ${Math.floor(msg.createdAt - message.createdAt)}ms!`);
         await message.channel.send({embeds: [embed]});
         msg.delete();
     }

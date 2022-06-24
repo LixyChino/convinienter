@@ -17,7 +17,7 @@ const arr = ['command'];
 console.log(client.commands)
 
 client.on('ready', () => {
-	console.log(`${client.user.tag} is ready ✅`)
+	console.log(`${client.user.tag} is ready! ✅`)
 });
 
 client.on('messageCreate', async message => {
