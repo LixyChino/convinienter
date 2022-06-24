@@ -14,6 +14,8 @@ const arr = ['command'];
 	require(`./handlers/${handler}`)(client);
 });
 
+console.log(client.commands)
+
 client.on('ready', () => {
 	console.log(`${client.user.tag} is ready ✅`)
 });
@@ -29,7 +31,6 @@ client.on('messageCreate', async message => {
 	let command = client.commands.get(cmd);
 	if(!command) command = client.commands.get(client.aliases.get(cmd));
 	if(command) command.run(client, message, args);
-
 })
 
 client.login(config.token);
