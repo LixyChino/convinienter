@@ -32,5 +32,4 @@ client.on('messageCreate', async message => {
 
 })
 
-//login
 client.login(config.token);
