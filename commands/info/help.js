@@ -14,7 +14,6 @@ module.exports = {
                     value: `All of ${genre} commands!`,
                 });
             }
-            console.log(genres);
             const embed = new MessageEmbed().setTitle("Help").setFields(genres);
             message.channel.send({ embeds: [embed] });
         }

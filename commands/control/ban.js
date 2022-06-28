@@ -1,7 +1,7 @@
 module.exports = {
-    name: "kick",
+    name: "ban",
     category: "control",
-    description: "Owner or Authorized persons can kick  the member.",
+    description: "Owner or Authorized persons can ban  the member.",
 
     run: async (client, message, args) => {
         if (!message.member.permissions.has("BAN_MEMBERS"))
@@ -10,21 +10,19 @@ module.exports = {
             );
         if (args.length < 1 || message.mentions.members.size == 0) {
             return message.reply(
-                "```Choose you want to kicked member.\nキックしたいメンバーを選んでください。```"
+                "```Choose you want to banned member.\nBANしたいメンバーを選んでください。```"
             );
         }
         const members = message.mentions.members;
         let i = 0;
         members.forEach((member) => {
-            if (member.kickable) {
-                member.kick();
+            if (member.bannable) {
+                member.ban();
                 i++;
             }
         });
         message.reply(
-            "```Kicked the player.\n" +
-                i +
-                "人のプレイヤーをキックしました。```"
+            "```Banned the player.\n" + i + "人のプレイヤーをBANしました。```"
         );
     },
 };

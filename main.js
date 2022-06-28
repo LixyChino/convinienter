@@ -12,10 +12,6 @@ client.categoris = fs.readdirSync("./commands/");
     require(`./handlers/${handler}`)(client);
 });
 
-console.log(client.commands);
-console.log(client.aliases);
-console.log(client.categoris);
-
 client.on("ready", () => {
     console.log(`${client.user.tag} is ready! ✅`);
 });
